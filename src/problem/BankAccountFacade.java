@@ -1,4 +1,4 @@
-package facadePattern;
+package problem;
 
 //The Facade Design Pattern decouples or separates the client 
 //from all of the sub components
@@ -36,37 +36,37 @@ public class BankAccountFacade {
 	
 	
 	public void withdrawCash(double cashToGet){
-
+		
 		if(acctChecker.accountActive(getAccountNumber()) &&
 				codeChecker.isCodeCorrect(getSecurityCode()) &&
 				fundChecker.haveEnoughMoney(cashToGet)) {
-
-			System.out.println("Transaction Complete\n");
-
-		} else {
-
-			System.out.println("Transaction Failed\n");
-
-		}
-
+					
+					System.out.println("Transaction Complete\n");
+					
+				} else {
+					
+					System.out.println("Transaction Failed\n");
+					
+				}
+		
 	}
-
-
+	
+	
 	public void depositCash(double cashToDeposit){
-
+		
 		if(acctChecker.accountActive(getAccountNumber()) &&
 				codeChecker.isCodeCorrect(getSecurityCode())) {
-
-			fundChecker.makeDeposit(cashToDeposit);
-
-			System.out.println("Transaction Complete\n");
-
-		} else {
-
-			System.out.println("Transaction Failed\n");
-
-		}
-
+			
+					fundChecker.makeDeposit(cashToDeposit);
+					
+					System.out.println("Transaction Complete\n");
+					
+				} else {
+					
+					System.out.println("Transaction Failed\n");
+					
+				}
+		
 	}
 	
 }

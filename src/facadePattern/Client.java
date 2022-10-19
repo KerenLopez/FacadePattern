@@ -9,6 +9,8 @@ public class Client {
 		accessingBank.withdrawCash(50.00);
 
 		accessingBank.withdrawCash(990.00);
+		
+		accessingBank.depositCash(200);
 
 	}
 
